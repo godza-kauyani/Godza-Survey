@@ -2,7 +2,7 @@
 <html>
   <head>
     <link href="css/styles.css" rel="stylesheet">
-	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	
   </head>
   <body>
 	<div class="container">
@@ -16,10 +16,10 @@
 		  <!--My Details-->
 			<fieldset id="personal">
 			  <legend>Personal Details</legend>
-		  <label for="name" id="name-label">Full Name</label>
-			<input type="text" name="name" placeholder="Full Name" id="name">
+		  <label for="name" id="name-label" >Full Name</label>
+			<input type="text" name="name" placeholder="Full Name" id="name" required>
 		  <label for="email" id="email-label">Email Address</label>
-		  <input type="email" name="email" id="email" placeholder="email">
+		  <input type="email" name="email" id="email" placeholder="email" required>
 		  <label for="number" id="number-label">Age</label>
 		  <input type="number" 
 			placeholder="Age"
@@ -79,7 +79,7 @@
 			<textarea id="aditional" ></textarea>
 		  </fieldset>
 		  <fieldset id="buttons"><legend>Submit Questions</legend>
-		  <button type="submit">Submit</button>
+		  <button type="submit" id="submit">Submit</button>
 		  <button type="reset">Cancel</button>
 		  </fieldset>
 		</form>
@@ -88,6 +88,6 @@
 
 	  </footer>
 	</div>
-
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>		
