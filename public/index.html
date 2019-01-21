@@ -1,93 +1,90 @@
 <!DOCTYPE html>
 <html>
   <head>
+	<title>Godza Survey</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet">
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
 	<div class="container">
-	  <header>
-		
+	  
 		<h1 id="title">My Website Survey</h1>
 		<p id="description">A survey to find out about your views about our content</p>
-	  </header>
+	  
 	  <main>
-		<form id="survey-form" netlify method="POST" >
+		<form id="survey-form" netlify method="POST" class="card">
 		  <!--My Details-->
-			<fieldset id="personal">
+			<fieldset id="personal" class="form-group">
 			  <legend>Personal Details</legend>
 		  <label for="name" id="name-label" >Full Name</label>
-			<input type="text" name="name" placeholder="Full Name" id="name" required>
+			  <input type="text" name="name" placeholder="Full Name" id="name" required class="form-control"> 
 		  <label for="email" id="email-label">Email Address</label>
-		  <input type="email" name="email" id="email" placeholder="email" required>
+			  <input type="email" name="email" id="email" placeholder="email" required class="form-control" >
 		  <label for="number" id="number-label">Age</label>
 		  <input type="number" 
 			placeholder="Age"
 			name="age "
+			class="form-control" 
 			min="18"
 			max="99"
 			id="number">
 			  <label>Please Enter Sex</label>
-			  <select id="dropdown">
-				<option>Male</option>
-				<option>Female</option>
-				<option>Prefer not to say</option>
-			  </select>
+			  <select  id="dropdown"class="form-control" >
+				  <option value="1">Male</option>
+				  <option value="2">Female</option>
+				  <option value="3">Other</option>
+				</select>
+			  
 			</fieldset>
-		  <fieldset><!--questions section-->
+		  <fieldset ><!--questions section-->
 			<legend>Please Answer the following</legend>
 			<fieldset><!--radio buttons-->
 			  <legend>How do you rate the quality of our content</legend>
 			<ul>
 			  <li>
-				<label for="excelent">Excelent</label>
-				<input type="radio" value="excelent" name="quality">
-			  </li>
-			  <li>
+				<input type="radio" value="good" id="good"checked name="quality">
 				<label for="good">Good</label>
-				<input type="radio" value="good" checked name="quality">
 			  </li>
 			  <li>
+				
+				<input type="radio" value="bad" name="quality" id="bad">
 				<label for="bad">Bad</label>
-				<input type="radio" value="bad" name="quality">
 			  </li>
-			  <li>
-				<label for="terrible">Terrible</label>
-				<input type="radio" value="terrible" name="quality">
-			  </li>
+			  
 			</ul>
 			</fieldset>
-			<fieldset><!--for checkboxes-->
+			<fieldset ><!--for checkboxes-->
 			  <legend>What new content do you want to see on your website</legend>
-			  <ol>
-				<li>
-				  <label for="news">News</label>
-				  <input type="checkbox" value="news" name="news">
+			  <ul>
+				<li class="form-check">
+				  
+				  <input type="checkbox" value="news" name="news" id="news"class="form-check-input"  >
+				  <label for="news"    class="form-check-label" >News</label>
 				</li>
-				<li>
-				  <label for="sports">Sports</label>
-				  <input type="checkbox" value="sports" name="sports">
+				<li class="form-check">
+				  <input type="checkbox" value="sports" name="sports" id="sports" class="form-check-input" >
+				  <label for="sports"   class="form-check-label" >Sports</label>
 				</li>
-				<li>
-				  <label for="news">Other please specify</label>
-				  <textarea> </textarea>
-				</li>
-			  </ol>
+				
+			  </ul>
 			</fieldset>
 			
 			<h2>Aditional Comments</h2>
-			<textarea id="aditional" ></textarea>
+			<textarea id="aditional" class="form-control"></textarea>
 		  </fieldset>
-		  <fieldset id="buttons"><legend>Submit Questions</legend>
-		  <button type="submit" id="submit">Submit</button>
-		  <button type="reset">Cancel</button>
+		  <fieldset id="buttons" class="card-action"><legend>Submit Questions</legend>
+			<button type="submit" id="submit" class="btn btn-primary" >Submit</button>
+		  
 		  </fieldset>
 		</form>
 	  </main>
-	  <footer>
-
-	  </footer>
+	  
 	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	
   </body>
 </html>		
